@@ -1,0 +1,26 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+/* 通用颜色 */
+.bg-yellow{
+  background-color: #fff500;
+}
+/* 字体大小颜色 */
+/* 一级标题  */
+.h1-heading{
+  font-size: 36rpx;
+}
+/* 二级标题  */
+.h2-heading{
+  font-size: 30rpx;
+}
+/* 副标题  */
+.small-text{
+  color: black;
+  font-size: 24rpx;
+  opacity: 0.5;
+}

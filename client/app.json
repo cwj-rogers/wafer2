@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/fitness/fitness",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/addCgi/addCgi"
+  ],
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"首页"
+    },
+    {
+      "pagePath":"pages/home/home",
+      "text":"自定义"
+    },
+    {
+      "pagePath": "pages/fitness/fitness",
+      "text": "健身室"
+    }]
+  },
+  "debug":true
+}

@@ -1,0 +1,97 @@
+/**index.wxss**/
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.flex-wrp{
+  width: 750rpx;
+  display:flex;
+}
+/* 列表样式  */
+.list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30rpx 0rpx;
+  width: 93%;
+  background: #FFF;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-top: none;
+  transition: all 300ms ease;
+  font-size: 32rpx;
+}
+.list-item-first{
+  height: 80rpx;
+  width: 94%;
+  margin-top: 30rpx;
+  border: 0rpx solid darkgray;
+  background: #fff500;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  padding: 0rpx 0rpx;
+}
+.fitness-room{
+  margin-left: 30rpx;
+}
+.fitness-distance{
+  margin-left: 30rpx;
+}
+.go-detail{
+  display: flex;
+  flex-grow:2;
+  justify-content:flex-end;
+  padding-right: 30rpx;
+  font-weight:900;
+  opacity: 0.5;
+}
+/* 轮播图  */
+.list-item-map{
+  height: 350rpx;
+  padding: 0rpx 0rpx;
+}
+.list-item-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  height: 140rpx;
+  margin-left: 30rpx;
+}
+/* 课名  */
+.list-item-item .cname{
+  font-size: 30rpx;
+  max-width: 300rpx;
+  overflow: hidden;
+  word-break:keep-all;
+}
+.list-item-item .cname-time-site{
+  font-size: 24rpx;
+  opacity: 0.5;
+}
+.list-item-button{
+  flex-grow: 2;
+  align-items: center;
+}
+.cname-button{
+  background-color: #fff500;
+}
+.cname-button-hover {
+  background-color: #F6F6F6;
+}
+.list-item-button text{
+  font-size: 20rpx;
+  opacity: 0.5;
+}
+.list-item-last{
+  height: 80rpx;
+  justify-content: center;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.list-item-last text{
+  font-size: 30rpx;
+  opacity: 0.5;
+}

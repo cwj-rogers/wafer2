@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-spacing">
+        <view class="flex-wrp bg-yellow" style="flex-direction:row;">
+          <view class="flex-item flex-item-first bg-yellow">3月</view>
+          <view class="flex-item bg-yellow">一</view>
+          <view class="flex-item bg-yellow">二</view>
+          <view class="flex-item bg-yellow">三</view>
+          <view class="flex-item bg-yellow">四</view>
+          <view class="flex-item bg-yellow">五</view>
+          <view class="flex-item bg-yellow">六</view>
+          <view class="flex-item bg-yellow">日</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 健身房/户外活动 列表 -->
+    <view class='flex-wrp' style='flex-direction:column;align-items:center;'>
+      <view class="list-item list-item-first bg-yellow">
+        <text class='fitness-room'>天河贝曼咖啡店</text>
+        <view class='fitness-distance'>
+          <image style="width: 20px; height: 20px; background-color: #eeeeee;" src="map.png"></image>
+          <text>1km</text>
+        </view>
+        <text class='go-detail'>＞</text>
+      </view>
+
+      <view class="list-item">
+        <view class='list-item-item'>
+          <image style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;" src="../index/user-unlogin.png"></image>
+        </view>
+        <view class='list-item-item'>
+          <text class='cname'>Yoga空中瑜伽Yoga空中瑜伽</text>
+          <text class='cname-time-site'>下午 14:00-15:00\n瑜伽大教室</text>
+        </view>
+        <view class='list-item-item list-item-button'>
+          <button class='cname-button' size="mini" loading='false' hover-class="cname-button-hover">参加</button>
+          <text>人数: 11人</text>
+        </view>
+      </view>
+
+      <view class="list-item">
+        <view class='list-item-item'>
+          <image style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;" src="../index/user-unlogin.png"></image>
+        </view>
+        <view class='list-item-item'>
+          <text class='cname'>Yoga空中瑜伽Yoga空中瑜伽</text>
+          <text class='cname-time-site'>下午 14:00-15:00\n瑜伽大教室</text>
+        </view>
+        <view class='list-item-item list-item-button'>
+          <button class='cname-button' size="mini" loading='false' hover-class="cname-button-hover">参加</button>
+          <text>人数: 11人</text>
+        </view>
+      </view>
+
+      <view class="list-item list-item-last bg-yellow">
+        <text class='see-more'>查看更多</text>
+      </view>
+
+    </view>
+  </view>
+</view>
