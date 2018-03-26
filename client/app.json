@@ -3,7 +3,8 @@
     "pages/fitness/fitness",
     "pages/home/home",
     "pages/index/index",
-    "pages/addCgi/addCgi"
+    "pages/addCgi/addCgi",
+    "pages/test/test"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
@@ -24,6 +25,10 @@
     {
       "pagePath": "pages/fitness/fitness",
       "text": "健身室"
+    },
+    {
+      "pagePath": "pages/test/test",
+      "text": "测试"
     }]
   },
   "debug":true
