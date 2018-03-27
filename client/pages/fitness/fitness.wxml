@@ -21,19 +21,19 @@
 
       <!-- 场地介绍  -->
       <view class="list-item">
-        <view class='list-item-adress'>
-          <button type="primary" bindtap=""> 点击打开地图 </button>
+        <view class='list-item-item'>
+          <text>地址: 佛山市顺德区市图书馆</text>
         </view>
         <view class='list-item-item'>
-          <image style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;" src="../index/user-unlogin.png"></image>
+          <text>简洁: 萨拉丁飞机撒地方流口水的风景塑料袋看风景水力发电</text>
         </view>
-        <view class='list-item-item'>
-          <text class='cname'>Yoga空中瑜伽Yoga空中瑜伽</text>
-          <text class='cname-time-site'>下午 14:00-15:00\n瑜伽大教室</text>
-        </view>
-        <view class='list-item-item list-item-button'>
-          <button class='cname-button' size="mini" loading="{{false}}" hover-class="cname-button-hover">参加</button>
-          <text>人数: 11人</text>
+        <view class='list-item-item list-item-course'>
+          <text>课程列表</text>
+          <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+              <view id="green" class="scroll-view-item_H bc_green"></view>
+              <view id="red"  class="scroll-view-item_H bc_red"></view>
+              <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+          </scroll-view>
         </view>
       </view>
       <view class="list-item list-item-last bg-yellow">

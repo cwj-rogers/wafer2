@@ -9,12 +9,12 @@ page {
   width: 750rpx;
   display:flex;
 }
+
 /* 列表样式  */
 .list-item{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
   padding: 30rpx 0rpx;
   width: 93%;
   background: #FFF;
@@ -24,7 +24,7 @@ page {
   font-size: 32rpx;
 }
 .list-item-first{
-  justify-content: center;
+  align-items: center; 
   height: 80rpx;
   width: 94%;
   margin-top: 30rpx;
@@ -34,7 +34,8 @@ page {
   border-top-right-radius: 20rpx;
   padding: 0rpx 0rpx;
 }
-/* 轮播图  */
+
+  /* 轮播图  */
 .list-item-map{
   height: 350rpx;
   padding: 0rpx 0rpx;
@@ -46,52 +47,44 @@ page {
 .list-item-map .slide-image{
   width: 100%;
 }
+  /* 信息样式  */
 .list-item-item{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:flex-start;
-  height: 140rpx;
-  margin-left: 30rpx;
+  height: auto;
+  margin: 10rpx;
 }
 .list-item-adress{
   flex-grow: 10;
 }
 
-
-
-/* 课名  */
-.list-item-item .cname{
-  font-size: 30rpx;
-  max-width: 300rpx;
-  overflow: hidden;
-  word-break:keep-all;
+  /* 课程滚动视图  */
+.list-item-course{
+  padding: 10rpx;
+  background-color: gray;
 }
-.list-item-item .cname-time-site{
-  font-size: 24rpx;
-  opacity: 0.5;
+.scroll-view_H{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-content: space-between;
+    align-items:center;
+    white-space: nowrap;
+    overflow: hidden;
 }
-.list-item-button{
-  flex-grow: 2;
-  align-items: center;
+.scroll-view-item_H{
+    display: inline-block;
+    width: 200rpx;
+    height: 100rpx;
 }
-.cname-button{
-  background-color: #fff500;
+.bc_green{
+  background: green;
 }
-.cname-button-hover {
-  background-color: #F6F6F6;
+.bc_red{
+  background: red;
 }
-.list-item-button text{
-  font-size: 20rpx;
-  opacity: 0.5;
-}
-.list-item-last{
-  height: 80rpx;
-  justify-content: center;
-  border-bottom-left-radius: 20rpx;
-  border-bottom-right-radius: 20rpx;
-}
-.list-item-last text{
-  font-size: 30rpx;
-  opacity: 0.5;
+.bc_yellow{
+  background: yellow;
 }
