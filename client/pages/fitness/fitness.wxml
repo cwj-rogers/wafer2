@@ -19,6 +19,7 @@
         </swiper>
       </view>
 
+      <!-- 场地介绍  -->
       <view class="list-item">
         <view class='list-item-adress'>
           <button type="primary" bindtap=""> 点击打开地图 </button>

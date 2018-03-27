@@ -1,0 +1,75 @@
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+/* 排序条件样式  */
+.sort-condition{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+  background-color: white;
+}
+.sort-condition view{
+  width: 365rpx;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sort-condition .smart{
+  border-right: 2rpx solid gainsboro;
+}
+
+/* 列表样式  */
+.list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items:flex-start;
+  height: 200rpx;
+  width: 710rpx;
+  padding: 40rpx 20rpx;
+  margin-top: 20rpx;
+  background: #FFF;
+  border-top: 5px solid rgba(255, 245, 0, 1);
+  transition: all 300ms ease;
+  font-size: 32rpx;
+}
+.list-item-item{
+  height: 200rpx;
+}
+.list-item-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10rpx; 
+  width: 375rpx;
+}
+.list-item-content .item-tag{
+  padding: 8rpx 16rpx;
+  background-color: gray;
+  margin-right: 8rpx;
+  border-radius: 15rpx;
+  color: white;
+  font-size: 20rpx;
+}
+.list-item-sub{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10rpx;
+}
+.list-item-sub view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.list-item-sub view text{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}

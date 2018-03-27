@@ -1,0 +1,77 @@
+<view class="container">
+  <view class="page-body">
+    <!-- 排序条件  -->
+    <view class='sort-condition'>
+      <view class='smart h2-heading'>智能排序</view>
+      <view class='nearest h2-heading'>距离最近</view>
+    </view>
+
+    <!-- 健身房列表完整item  -->
+    <view class='list-item'>
+      <view class='list-item-item item-img' bindtap='gymDetail' style='width:200rpx;height:200rpx;overflow:hidden;'>
+        <image src='../addCgi/code.jpg'></image>
+      </view>
+      <view class='list-item-item list-item-content'>
+        <text bindtap='gymDetail' class='h1-heading'>嘉州健身中心</text>
+        <view>
+          <text class='item-tag'>标签</text><text class='item-tag'>标签</text>
+        </view>
+        <view>
+          <text class='small-text'>地址: 吉利广场5楼西侧501 </text>
+        </view>
+      </view>
+      <view class='list-item-item list-item-sub'>
+        <view>
+          <text class='small-text' style='margin-bottom:5rpx;'>订阅</text><switch></switch>
+        </view>
+        <view>
+          <text class='small-text'>100m</text>
+        </view>
+      </view>
+    </view>
+    <view class='list-item'>
+      <view class='list-item-item item-img' bindtap='gymDetail' style='width:200rpx;height:200rpx;overflow:hidden;'>
+        <image src='../addCgi/code.jpg'></image>
+      </view>
+      <view class='list-item-item list-item-content'>
+        <text bindtap='gymDetail' class='h1-heading'>嘉州健身中心</text>
+        <view>
+          <text class='item-tag'>标签</text><text class='item-tag'>标签</text>
+        </view>
+        <view>
+          <text class='small-text'>地址: 吉利广场5楼西侧501 </text>
+        </view>
+      </view>
+      <view class='list-item-item list-item-sub'>
+        <view>
+          <text class='small-text' style='margin-bottom:5rpx;'>订阅</text><switch></switch>
+        </view>
+        <view>
+          <text class='small-text'>100m</text>
+        </view>
+      </view>
+    </view>
+    <view class='list-item'>
+      <view class='list-item-item item-img' bindtap='gymDetail' style='width:200rpx;height:200rpx;overflow:hidden;'>
+        <image src='../addCgi/code.jpg'></image>
+      </view>
+      <view class='list-item-item list-item-content'>
+        <text bindtap='gymDetail' class='h1-heading'>嘉州健身中心</text>
+        <view>
+          <text class='item-tag'>标签</text><text class='item-tag'>标签</text>
+        </view>
+        <view>
+          <text class='small-text'>地址: 吉利广场5楼西侧501 </text>
+        </view>
+      </view>
+      <view class='list-item-item list-item-sub'>
+        <view>
+          <text class='small-text' style='margin-bottom:5rpx;'>订阅</text><switch></switch>
+        </view>
+        <view>
+          <text class='small-text'>100m</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

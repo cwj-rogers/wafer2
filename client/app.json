@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/fitness/fitness",
+    "pages/nearestGym/nearestGym",
     "pages/home/home",
     "pages/index/index",
     "pages/addCgi/addCgi",
@@ -15,20 +16,12 @@
   },
   "tabBar":{
     "list":[{
-      "pagePath":"pages/index/index",
-      "text":"首页"
-    },
-    {
       "pagePath":"pages/home/home",
-      "text":"自定义"
+      "text":"课程表"
     },
     {
-      "pagePath": "pages/fitness/fitness",
-      "text": "健身室"
-    },
-    {
-      "pagePath": "pages/test/test",
-      "text": "测试"
+      "pagePath": "pages/nearestGym/nearestGym",
+      "text": "附近"
     }]
   },
   "debug":true
