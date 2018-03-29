@@ -31,7 +31,7 @@ page {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 150rpx;
+  height: 180rpx;
   width: 93%;
   background: #FFF;
   border: 1px solid rgba(0, 0, 0, .1);

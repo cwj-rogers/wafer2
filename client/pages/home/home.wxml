@@ -36,7 +36,7 @@
           <text class='cname-time-site'>下午 14:00-15:00\n瑜伽大教室</text>
         </view>
         <view class='list-item-item list-item-button'>
-          <button class='cname-button' size="mini" loading='false' hover-class="cname-button-hover">参加</button>
+          <button class='cname-button' size="mini" loading='{{false}}' hover-class="cname-button-hover">参加</button>
           <text>人数: 11人</text>
         </view>
       </view>
@@ -50,7 +50,7 @@
           <text class='cname-time-site'>下午 14:00-15:00\n瑜伽大教室</text>
         </view>
         <view class='list-item-item list-item-button'>
-          <button class='cname-button' size="mini" loading='false' hover-class="cname-button-hover">参加</button>
+          <button class='cname-button' size="mini" loading='{{false}}' hover-class="cname-button-hover">参加 <text class='icon-help'>?</text></button>
           <text>人数: 11人</text>
         </view>
       </view>

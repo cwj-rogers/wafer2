@@ -1,5 +1,6 @@
 {
   "pages":[
+    
     "pages/fitness/fitness",
     "pages/nearestGym/nearestGym",
     "pages/home/home",
@@ -22,6 +23,14 @@
     {
       "pagePath": "pages/nearestGym/nearestGym",
       "text": "附近"
+    },
+    {
+      "pagePath": "pages/test/test",
+      "text": "测试"
+    },
+    {
+      "pagePath": "pages/fitness/fitness",
+      "text": "场地详情"
     }]
   },
   "debug":true
