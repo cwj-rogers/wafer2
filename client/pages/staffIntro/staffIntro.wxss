@@ -1,0 +1,78 @@
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.flex-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30rpx;
+}
+.flex-item{
+  display: flex;
+  border-bottom: 3rpx solid #F6F6F6;
+  width: 650rpx;
+  height: 200rpx;
+  padding: 20rpx;
+}
+/* 顶栏  */
+.staff-img-name{
+  display: flex;
+  flex-direction: row;
+}
+.staff-img-name .staff-img image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.staff-img-name .staff-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20rpx;
+}
+.staff-img-name .staff-name .name{
+  margin-bottom: 10rpx;
+}
+.staff-img-name .staff-name .explain{
+}
+/* 专业  */
+.staff-qua,.staff-talk{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80rpx;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+}
+.title .title-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 100rpx;
+}
+.title .title-icon image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.title > text{
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  padding-left: 120rpx;
+}
+.content text{
+  color: grey;
+  font-size: 30rpx;
+  opacity: 0.7;
+  padding: 0rpx 0;
+}

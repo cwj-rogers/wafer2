@@ -12,17 +12,21 @@
         <image src='../addCgi/code.jpg'></image>
       </view>
       <view class='list-item-item list-item-content'>
-        <text bindtap='gymDetail' class='h1-heading'>嘉州健身中心</text>
+        <text bindtap='gymDetail' class='h1-heading'>嘉州健身中心asdfasdfasdfsadfsadfsdf</text>
+        <view class='tag-container'>
+          <text class='item-tag'>标签aaaaaaabbbbbb</text><text class='item-tag'>标签</text><text class='item-tag'>标签</text><text class='item-tag'>标签</text>
+<text class='item-tag'>标签</text><text class='item-tag'>标签</text>      </view>
         <view>
-          <text class='item-tag'>标签</text><text class='item-tag'>标签</text>
-        </view>
-        <view>
-          <text class='small-text'>地址: 吉利广场5楼西侧501 </text>
+          <text class='small-text'>地址: 吉利广场5楼西侧501吉利广场5楼西侧501 </text>
         </view>
       </view>
       <view class='list-item-item list-item-sub'>
         <view>
-          <text class='small-text' style='margin-bottom:5rpx;'>订阅</text><switch></switch>
+          <view class='sub-explain'>
+            <icon type="info" size="13" color='rgb(0,255,255)'/>
+            <text class='small-text'>订阅</text>
+          </view>
+          <switch></switch>
         </view>
         <view>
           <text class='small-text'>100m</text>
@@ -44,7 +48,11 @@
       </view>
       <view class='list-item-item list-item-sub'>
         <view>
-          <text class='small-text' style='margin-bottom:5rpx;'>订阅</text><switch></switch>
+          <view class='sub-explain'>
+            <icon type="info" size="13" color='rgb(0,255,255)'/>
+            <text class='small-text'>订阅</text>
+          </view>
+          <switch></switch>
         </view>
         <view>
           <text class='small-text'>100m</text>
@@ -66,7 +74,11 @@
       </view>
       <view class='list-item-item list-item-sub'>
         <view>
-          <text class='small-text' style='margin-bottom:5rpx;'>订阅</text><switch></switch>
+          <view class='sub-explain'>
+            <icon type="info" size="13" color='rgb(0,255,255)'/>
+            <text class='small-text'>订阅</text>
+          </view>
+          <switch></switch>
         </view>
         <view>
           <text class='small-text'>100m</text>

@@ -40,21 +40,36 @@ page {
 .list-item-item{
   height: 200rpx;
 }
+/* 内容介绍  */
 .list-item-content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 10rpx; 
   width: 375rpx;
+  overflow: hidden;
+}
+.list-item-content text{
+  white-space:nowrap;
+}
+.list-item-content .tag-container{
+  display: flex;
+  justify-content: space-around;
+  align-content:space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+  min-height: 106rpx;
+  padding: 0rpx 25rpx 0rpx 0;
 }
 .list-item-content .item-tag{
-  padding: 8rpx 16rpx;
+  padding: 6rpx 16rpx;
   background-color: gray;
   margin-right: 8rpx;
   border-radius: 15rpx;
   color: white;
   font-size: 20rpx;
 }
+/* 订阅小按钮相关  */
 .list-item-sub{
   display: flex;
   flex-direction: column;
@@ -67,9 +82,18 @@ page {
   justify-content: center;
   align-content: center;
 }
-.list-item-sub view text{
+/* .list-item-sub view text{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+} */
+.list-item-sub view .sub-explain{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 10rpx;
+  padding: 0 20rpx 0 5rpx;
 }

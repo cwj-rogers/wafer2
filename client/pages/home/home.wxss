@@ -72,8 +72,7 @@ page {
 }
 /* 课名  */
 .list-item-item .cname{
-  font-size: 30rpx;
-  max-width: 300rpx;
+  max-width: 350rpx;
   overflow: hidden;
   word-break:keep-all;
 }
@@ -82,18 +81,24 @@ page {
   opacity: 0.5;
 }
 .list-item-button{
-  flex-grow: 2;
+  flex-basis: 180rpx;
   align-items: center;
+  margin-left: 0rpx;
 }
 .cname-button{
   background-color: #fff500;
+  padding-left:0px;
+  padding-right:0px;
 }
 .cname-button-hover {
-  background-color: #F6F6F6;
+  background-color: lightgray;
 }
-.list-item-button text{
-  font-size: 20rpx;
-  opacity: 0.5;
+.join_num{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  margin-top: 15rpx;
 }
 .list-item-last{
   height: 80rpx;

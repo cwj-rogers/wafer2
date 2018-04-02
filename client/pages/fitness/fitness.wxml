@@ -56,44 +56,25 @@
         <view class='list-item-item'>
           <text class='item-title h1-heading'>员工简介</text>
           <view class='all-staffs'>
-            <view class='staff-img-name'>
+            <view class='staff-img-name' bindtap='staffIntroduced'>
               <image src='../index/user-unlogin.png'></image>
-              <text class='h2-heading'>李全蛋饼</text>
-              <text class='mini-text'>国家二级运动员HIIT国际认证教练</text>
+              <text class='h2-heading link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text>李全蛋</text>
-              <text class='mini-text'>国家二级运动员,HIIT国际认证教练</text>
+              <text class='h2-heading link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text>李全蛋</text>
+              <text class='h2-heading link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text>李全蛋</text>
+              <text class='h2-heading link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text>李全蛋</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text>李全蛋</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text>李全蛋</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text>李全蛋</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text class='h2-heading'>李全蛋</text>
-              <text class='mini-text'>国家二级运动员,HIIT国际认证教练</text>
+              <text class='h2-heading link-style'>李全蛋饼</text>
             </view>
           </view>
         </view>

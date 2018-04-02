@@ -9,6 +9,15 @@
 .bg-yellow{
   background-color: #fff500;
 }
+.bg-sub-color{
+  background-color: #FFF7E2;
+}
+.bg-info{
+  background-color: #5bc0de;
+}
+.bg-white{
+  background-color: white;
+}
 /* 字体大小颜色 */
 /* 一级标题  */
 .h1-heading{
@@ -25,9 +34,15 @@
   opacity: 0.7;
 }
 .mini-text{
-  color: gainsboro;
+  color: lightgray;
   font-size: 18rpx;
 }
+/* 可点击效果  */
+.link-style{
+  color: lightblue;
+  text-decoration: underline;
+}
+
 /* 帮助说明图标  */
 .icon-help{
   border: 1rpx solid gray;

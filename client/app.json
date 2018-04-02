@@ -1,9 +1,10 @@
 {
   "pages":[
-    
-    "pages/fitness/fitness",
-    "pages/nearestGym/nearestGym",
     "pages/home/home",
+    "pages/fitness/fitness",
+    "pages/staffIntro/staffIntro",
+    "pages/nearestGym/nearestGym",
+    
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/test/test"
@@ -13,16 +14,17 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "Wafer Quick Start",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
   },
   "tabBar":{
     "list":[{
       "pagePath":"pages/home/home",
-      "text":"课程表"
+      "text":"最新活动"
     },
     {
       "pagePath": "pages/nearestGym/nearestGym",
-      "text": "附近"
+      "text": "附近场地"
     },
     {
       "pagePath": "pages/test/test",

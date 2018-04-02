@@ -34,5 +34,10 @@ Page({
     this.setData({
       duration: e.detail.value
     })
+  },
+  staffIntroduced:function (e){
+    wx.navigateTo({
+      url: '../staffIntro/staffIntro',
+    })
   }
 })

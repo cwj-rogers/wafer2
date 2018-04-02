@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="flex-body">
+    <view class='flex-item bg-sub-color staff-img-name'>
+      <view class='staff-img'>
+        <image src='../index/user-unlogin.png'></image>
+      </view>
+      <view class='staff-name'>
+          <text class='name h1-heading'>Lucy姐姐</text>
+          <text class='explain h2-heading'>专业瑜伽教练</text>
+      </view>
+    </view>
+    <view class='flex-item bg-white staff-qua'>
+      <view class='title'>
+        <view class='title-icon'>
+          <image src='../index/user-unlogin.png'></image>
+        </view>
+        <text class='h1-heading'>专业资质</text>
+      </view>
+      <view class='content'>
+        <text>- 国际瑜伽大赛一等奖</text>
+        <text>- 华南区珠江小姐亚军</text>
+      </view>
+    </view>
+    <view class='flex-item bg-sub-color staff-talk'>
+      <view class='title'>
+        <view class='title-icon'>
+          <image src='../index/user-unlogin.png'></image>
+        </view>
+        <text class='h1-heading'>教练说</text>
+      </view>
+      <view class='content'>
+        <text>sadfsadfsadf</text>
+      </view>
+    </view>
+  </view>
+</view>
