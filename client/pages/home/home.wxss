@@ -7,6 +7,7 @@ page {
 }
 .flex-wrp{
   display:flex;
+  padding-bottom: 5rpx;
 }
 .flex-item{
   position: relative;
@@ -19,11 +20,23 @@ page {
   color: black;
   text-align: center;
 }
-.flex-item-first{
+.flex-item-month{
   width: 120rpx;
+  font-weight: 700;
+  font-size: 42rpx;
 }
 .bg-yellow{
   background-color: #fff500;
+}
+.flex-item-day{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90rpx;
+  height: 90rpx;
+  background-color: black;
+  border-radius: 50%;
+  color: #fff500;
 }
 /* 列表样式  */
 .list-item{

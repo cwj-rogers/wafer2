@@ -4,14 +4,17 @@
     <view class="page-section">
       <view class="page-section-spacing">
         <view class="flex-wrp bg-yellow" style="flex-direction:row;">
-          <view class="flex-item flex-item-first bg-yellow">3月</view>
-          <view class="flex-item bg-yellow">一</view>
-          <view class="flex-item bg-yellow">二</view>
-          <view class="flex-item bg-yellow">三</view>
-          <view class="flex-item bg-yellow">四</view>
-          <view class="flex-item bg-yellow">五</view>
-          <view class="flex-item bg-yellow">六</view>
-          <view class="flex-item bg-yellow">日</view>
+          <view class="flex-item flex-item-month bg-yellow">3月</view>
+          <view class="flex-item">
+            <text class='flex-item-week hide'>一</text>
+            <text class='flex-item-day'>22</text>
+          </view>
+          <view class="flex-item">二</view>
+          <view class="flex-item">三</view>
+          <view class="flex-item">四</view>
+          <view class="flex-item">五</view>
+          <view class="flex-item">六</view>
+          <view class="flex-item">日</view>
         </view>
       </view>
     </view>

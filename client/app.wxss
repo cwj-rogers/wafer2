@@ -18,6 +18,10 @@
 .bg-white{
   background-color: white;
 }
+/* 显示隐藏  */
+.hide{
+  display: none;
+}
 /* 字体大小颜色 */
 /* 一级标题  */
 .h1-heading{
