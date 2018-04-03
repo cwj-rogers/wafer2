@@ -58,23 +58,27 @@
           <view class='all-staffs'>
             <view class='staff-img-name' bindtap='staffIntroduced'>
               <image src='../index/user-unlogin.png'></image>
-              <text class='h2-heading link-style'>李全蛋饼</text>
+              <text class='small-text link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text class='h2-heading link-style'>李全蛋饼</text>
+              <text class='small-text link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text class='h2-heading link-style'>李全蛋饼</text>
+              <text class='small-text link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text class='h2-heading link-style'>李全蛋饼</text>
+              <text class='small-text link-style'>李全蛋饼</text>
             </view>
             <view class='staff-img-name'>
               <image src='../index/user-unlogin.png'></image>
-              <text class='h2-heading link-style'>李全蛋饼</text>
+              <text class='small-text link-style'>李全蛋饼</text>
+            </view>
+            <view class='staff-img-name'>
+              <image src='../index/user-unlogin.png'></image>
+              <text class='small-text link-style'>李全蛋饼</text>
             </view>
           </view>
         </view>

@@ -31,6 +31,10 @@
 .h2-heading{
   font-size: 30rpx;
 }
+/* 三级标题  */
+.h3-heading{
+  font-size: 24rpx;
+}
 /* 副标题  */
 .small-text{
   color: grey;

@@ -15,7 +15,7 @@
         <view class='title-icon'>
           <image src='../index/user-unlogin.png'></image>
         </view>
-        <text class='h1-heading'>专业资质</text>
+        <text class='h1-heading'>资质履历</text>
       </view>
       <view class='content'>
         <text>- 国际瑜伽大赛一等奖</text>
@@ -27,7 +27,7 @@
         <view class='title-icon'>
           <image src='../index/user-unlogin.png'></image>
         </view>
-        <text class='h1-heading'>教练说</text>
+        <text class='h1-heading'>教练寄语</text>
       </view>
       <view class='content'>
         <text>sadfsadfsadf</text>
