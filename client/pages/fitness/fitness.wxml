@@ -21,7 +21,7 @@
 
       <!-- 场地介绍  -->
       <view class="list-item">
-        <!-- <view class='list-item-item'>
+         <view class='list-item-item'>
           <view>
             <text class='item-title'>营业 10:00-22:00</text>
             <text>d电话 0757-85339798</text>
@@ -34,7 +34,7 @@
         <view class='list-item-item'>
           <text class='item-title h1-heading'>场地介绍</text>
           <text>萨拉丁飞机撒地方流口水的风景塑料袋看风景水力发电</text>
-        </view> -->
+        </view> 
           <!-- 课程安排  -->
         <view class='list-item-item list-item-program'>
           <text class='item-title h1-heading'>课程安排</text>

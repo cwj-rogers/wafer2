@@ -4,22 +4,14 @@
     <view class="page-section">
       <view class="page-section-spacing">
         <view class="flex-wrp bg-yellow" style="flex-direction:row;">
-          <view class="flex-item flex-item-month bg-yellow">3月</view>
-          <!-- <view class="flex-item">
-            <text class='flex-item-week hide'>一</text>
-            <text class='flex-item-day'>22号</text>
-          </view>
-          <view class="flex-item">二</view>
-          <view class="flex-item">三</view>
-          <view class="flex-item">四</view>
-          <view class="flex-item">五</view>
-          <view class="flex-item">六</view>
-          <view class="flex-item">日</view> -->
-          <block wx:for="{{week}}" wx:key="*this">
+          <view class="flex-item flex-item-month bg-yellow">{{month}}</view>
+
+          <block wx:for="{{weekDate}}" wx:key="week">
             <view class="flex-item">
-              <text class='flex-item-day'>{{item}}</text>
+              <text data-index="{{index}}" class='{{index!=selectedIndex? "flex-item-week":"flex-item-day"}}' bindtap='dateButtonTap'>{{index!=selectedIndex? item.week:item.day}}</text>
             </view>
           </block>
+
         </view>
       </view>
     </view>
