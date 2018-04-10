@@ -8,7 +8,9 @@ Page({
       userInfo: {},
       logged: false,
       takeSession: false,
-      requestResult: ''
+      requestResult: '',
+      week: ["日", "一", "二", "三", "四", "五", "六"],
+      state: "0",
   },
   joinAct:function(e){
     console.log("参加");
@@ -28,5 +30,8 @@ Page({
     wx.navigateTo({
       url: '../fitness/fitness'
     })
+  },
+  chooseDate: function(){
+
   }
 })

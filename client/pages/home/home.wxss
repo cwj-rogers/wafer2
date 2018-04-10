@@ -37,6 +37,7 @@ page {
   background-color: black;
   border-radius: 50%;
   color: #fff500;
+  font-size: 28rpx;
 }
 /* 列表样式  */
 .list-item{
