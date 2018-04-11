@@ -5,9 +5,9 @@ page {
     flex-direction: column;
     justify-content: flex-start;
 }
-.flex-wrp{
-  display:flex;
-  padding-bottom: 5rpx;
+.page-section{
+  position:fixed;
+  z-index: 999;
 }
 .flex-item{
   position: relative;
@@ -25,9 +25,6 @@ page {
   font-weight: 700;
   font-size: 42rpx;
 }
-.bg-yellow{
-  background-color: #fff500;
-}
 .flex-item-day{
   position: absolute;
   top: 0;
@@ -38,6 +35,25 @@ page {
   border-radius: 50%;
   color: #fff500;
   font-size: 28rpx;
+}
+
+.page-body{
+  width: 750rpx;
+  padding-bottom: 30rpx;
+  padding-top: 95rpx;
+}
+.flex-wrp{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rpx;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  margin-top: 30rpx;
 }
 /* 列表样式  */
 .list-item{
@@ -56,7 +72,6 @@ page {
 .list-item-first{
   height: 80rpx;
   width: 94%;
-  margin-top: 30rpx;
   border: 0rpx solid darkgray;
   background: #fff500;
   border-top-left-radius: 20rpx;
@@ -79,7 +94,6 @@ page {
 .list-item-item{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items:flex-start;
   height: 140rpx;
   margin-left: 30rpx;
@@ -94,10 +108,15 @@ page {
   font-size: 24rpx;
   opacity: 0.5;
 }
+.list-item-content{
+  min-width: 350rpx;
+}
 .list-item-button{
   flex-basis: 180rpx;
+  justify-content: center;
   align-items: center;
   margin-left: 0rpx;
+  align-self:center;
 }
 .cname-button{
   background-color: #fff500;

@@ -1,73 +1,65 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="page-body">
-    <view class="page-section">
-      <view class="page-section-spacing">
-        <view class="flex-wrp bg-yellow" style="flex-direction:row;">
-          <view class="flex-item flex-item-month bg-yellow">{{month}}</view>
+  
+  <view class="page-section">
+    <view class="page-section-spacing">
+      <view class="flex-wrp bg-yellow" style="flex-direction:row;">
+        <view class="flex-item flex-item-month">{{month}}</view>
+        <!-- 日期控件  -->
+        <block wx:for="{{weekDate}}" wx:key="week">
+          <view class="flex-item">
+            <text data-index="{{index}}" class='{{index!=selectedIndex? "flex-item-week":"flex-item-day"}}' bindtap='dateButtonTap'>{{index!=selectedIndex? item.week:item.day}}</text>
+          </view>
+        </block>
 
-          <block wx:for="{{weekDate}}" wx:key="week">
-            <view class="flex-item">
-              <text data-index="{{index}}" class='{{index!=selectedIndex? "flex-item-week":"flex-item-day"}}' bindtap='dateButtonTap'>{{index!=selectedIndex? item.week:item.day}}</text>
-            </view>
-          </block>
-
-        </view>
       </view>
     </view>
+  </view>
 
+  <view class="page-body">
     <!-- 健身房/户外活动 列表 -->
-    <view class='flex-wrp' style='flex-direction:column;align-items:center;'>
-      <!-- 场地简介  -->
-      <view class="list-item list-item-first bg-yellow" bindtap='gymDetail'>
-        <text class='fitness-room'>天河贝曼咖啡店</text>
-        <view class='fitness-distance'>
-          <image style="width: 20px; height: 20px; background-color: #eeeeee;" src="map.png"></image>
-          <text>1km</text>
-        </view>
-        <text class='go-detail'>＞</text>
-      </view>
-      <!-- 活动说明  -->
-      <view class="list-item">
-        <view class='list-item-item' bindtap='staffIntroduced'>
-          <image style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;" src="../index/user-unlogin.png"></image>
-        </view>
-        <view class='list-item-item'bindtap='actExplode'>
-          <text class='cname h2-heading'>Yoga空中瑜伽Yoga空中瑜伽</text>
-          <text class='cname-time-site'>下午 14:00-15:00\n瑜伽大教室</text>
-        </view>
-        <view class='list-item-item list-item-button'>
-          <button class='cname-button h1-heading' size="mini" loading='{{false}}' hover-class="cname-button-hover" bindtap='joinAct'>
-            参加
-          </button>
-          <view class='join_num' bindtap='joinNumExp'>
-            <icon type="info" size="13" color='rgb(0,255,255)'/>
-            <text class='mini-text'>11人报名</text>
+    <view class='flex-wrp'>
+      
+      <block wx:for="{{requestResult}}" wx:key="id">
+        <view class='list'>
+        <!-- 场地简介  -->
+        <view class="list-item list-item-first bg-yellow" bindtap='gymDetail'>
+          <text class='fitness-room'>{{item.name}}</text>
+          <view class='fitness-distance'>
+            <image style="width: 20px; height: 20px; background-color: #eeeeee;" src="map.png"></image>
+            <text>{{item.distance>=1000? item.distance/1000+"km":item.distance+"m"}}</text>
           </view>
+          <text class='go-detail'>＞</text>
         </view>
-      </view>
-
-      <view class="list-item">
-        <view class='list-item-item'>
-          <image style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;" src="../index/user-unlogin.png"></image>
-        </view>
-        <view class='list-item-item'>
-          <text class='cname h2-heading'>Yoga空中瑜伽Yoga空中瑜伽</text>
-          <text class='cname-time-site'>下午 14:00-15:00\n瑜伽大教室</text>
-        </view>
-        <view class='list-item-item list-item-button'>
-          <button class='cname-button h1-heading' size="mini" loading='{{false}}' hover-class="cname-button-hover">参加</button>
-          <view class='join_num' bindtap='joinNumExp'>
-            <icon type="info" size="13" color='rgb(0,255,255)'/>
-            <text class='mini-text'>11人报名</text>
+        <!-- 活动列表  -->
+        <block wx:for="{{item.activities}}" wx:key="actId">
+          <view class="list-item">
+            <view class='list-item-item' bindtap='staffIntroduced'>
+              <image style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;" src="../index/user-unlogin.png"></image>
+            </view>
+            <view class='list-item-item list-item-content'bindtap='actExplode'>
+              <text class='cname h2-heading'>{{item.actName}}</text>
+              <text class='cname-time-site'>{{item.time}}</text>
+              <text class='cname-time-site'>{{item.room}}</text>
+            </view>
+            <view class='list-item-item list-item-button'>
+              <button class='cname-button h1-heading' size="mini" loading='{{false}}' hover-class="cname-button-hover" bindtap='joinAct'>
+                参加
+              </button>
+              <view class='join_num' bindtap='joinNumExp'>
+                <icon type="info" size="13" color='rgb(0,255,255)'/>
+                <text class='mini-text'>{{item.joinNum}}人报名</text>
+              </view>
+            </view>
           </view>
+        </block>
+        <!-- 查看更多  -->
+        <view class="list-item list-item-last bg-yellow" bindtap='showAllAct' data-id="{{item.id}}" data-index="{{index}}">
+          <text class='see-more'>查看全部</text>
         </view>
-      </view>
-
-      <view class="list-item list-item-last bg-yellow">
-        <text class='see-more'>查看更多</text>
-      </view>
-
+        </view>
+      </block>
+      
     </view>
   </view>
 </view>
