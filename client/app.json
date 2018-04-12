@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/nearestGym/nearestGym",
     "pages/home/home",
     "pages/fitness/fitness",
     "pages/staffIntro/staffIntro",
-    "pages/nearestGym/nearestGym",
+    
     
     "pages/index/index",
     "pages/addCgi/addCgi",
@@ -24,14 +25,6 @@
     {
       "pagePath": "pages/nearestGym/nearestGym",
       "text": "附近场地"
-    },
-    {
-      "pagePath": "pages/test/test",
-      "text": "测试"
-    },
-    {
-      "pagePath": "pages/index/index",
-      "text": "首页"
     }]
   },
   "debug":true

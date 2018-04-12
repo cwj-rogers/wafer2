@@ -82,12 +82,11 @@ page {
   justify-content: center;
   align-content: center;
 }
-/* .list-item-sub view text{
+ .list-item-sub view text{
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-content: center;
-} */
+  align-items: center;
+} 
 .list-item-sub view .sub-explain{
   display: flex;
   flex-direction: row;

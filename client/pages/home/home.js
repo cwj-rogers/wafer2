@@ -18,29 +18,34 @@ Page({
     // wx.startPullDownRefresh();
     wx.showNavigationBarLoading() //在标题栏中显示加载
 
-    //模拟加载
+    var that = this;
     setTimeout(function () {
       // complete
+      that.setData({
+        requestResult: getListData()
+      })
       wx.hideNavigationBarLoading() //完成停止加载
       wx.stopPullDownRefresh() //停止下拉刷新
-    }, 1500);
+    }, 1000);
   },
   onReachBottom: function(){
+    console.log("加载更多");
     wx.showLoading({
       title: 'loading',
       mask:true
     });
-    var data = this.data.requestResult;
-    var data2 = data.concat(data);
+    var data = getListData();
+    for(var i=0;i<data.length;i++){
+      data[i].id = parseInt(Math.random()*899+100);
+    }
+    var data2 = this.data.requestResult.concat(data);
     var that = this;
     setTimeout(function(){
       that.setData({
         requestResult:data2
       });
       wx.hideLoading();
-    },3000);
-    console.log(data2);
-    console.log("加载更多");
+    },1500);
   },
   joinAct:function(e){
     console.log("参加");
@@ -71,8 +76,15 @@ Page({
   showAllAct: function(e){
     var id = e.currentTarget.dataset.id;
     var index = e.currentTarget.dataset.index;
-    var showActData = this.data.requestResult[index].activities;
-    this.data.requestResult[index].activities = showActData.concat(showActData);
+    var oldActData, newActData2;
+    oldActData = this.data.requestResult[index].activities;
+    
+    var rand = parseInt(Math.random()*3);
+    newActData2 = getListData()[rand].activities;
+    for (var i = 0; i < newActData2.length; i++){
+      newActData2[i].actId = parseInt(Math.random() * 899 + 100, 10);
+    }
+    this.data.requestResult[index].activities = oldActData.concat(newActData2);
     this.setData({
       requestResult: this.data.requestResult
     })
@@ -108,9 +120,9 @@ function getMonth(){
 //获取列表数据
 function getListData(){
   var data = [
-    { id: 110, name: "嘉州健身训练中心", distance: "100", activities: [{actId:1,actName: "有氧健身操", room: "瑜伽大教室", time: "14:00-15:00", joinNum: 1 }, { actName: "有氧健身操",room: "瑜伽大教室2", time: "14:00-15:00", joinNum: 5}]},
-    { id: 112, name: "蜂狂运动中心", distance: "1500", activities: [{actId:2,actName: "有氧健身操", room: "蜂狂大教室", time: "17:00-19:00", joinNum: 25 }, { actName: "有氧健身操",room: "蜂狂大教室2", time: "14:00-15:00", joinNum: 33 }] },
-    { id: 113, name: "燃爆点训练中心", distance: "2800", activities: [{ actId: 3,actName: "有氧健身操", room: "爆点大教室", time: "21:00-22:00", joinNum: 35 }, { actName: "有氧健身操",room: "爆点大教室2", time: "14:00-15:00", joinNum: 22 }] }
+    { id: 110, name: "嘉州健身训练中心", distance: "100", activities: [{actId:1,actName: "有氧健身操", room: "瑜伽大教室", time: "14:00-15:00", joinNum: 1 }, { actName: "瑜伽拉筋舒展训练",room: "瑜伽大教室2", time: "14:00-15:00", joinNum: 5}]},
+    { id: 111, name: "蜂狂运动中心", distance: "1500", activities: [{actId:2,actName: "TR悬挂训练", room: "蜂狂大教室", time: "17:00-19:00", joinNum: 25 }, { actName: "森吧有氧健身操",room: "蜂狂大教室2", time: "14:00-15:00", joinNum: 33 }] },
+    { id: 112, name: "燃爆点训练中心", distance: "2800", activities: [{ actId: 3,actName: "HIIT有氧减脂训练营", room: "爆点大教室", time: "21:00-22:00", joinNum: 35 }, { actName: "HipHop风格舞蹈课堂",room: "爆点大教室2", time: "14:00-15:00", joinNum: 22 }] }
   ];
   return data;
 }
