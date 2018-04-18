@@ -1,9 +1,12 @@
 /**index.wxss**/
 page {
-    background: #F6F6F6;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.page-body{
+  overflow: hidden;
 }
 .flex-wrp{
   width: 750rpx;
@@ -15,7 +18,7 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30rpx 0rpx;
+  padding: 20rpx 0rpx;
   width: 750rpx;
   background: #FFF;
   border-top: none;
@@ -23,19 +26,39 @@ page {
   font-size: 32rpx;
 }
 .list-item-first{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center; 
+  position: fixed;
+  z-index: 999;
   height: 80rpx;
   width: 750rpx;
-  /* margin-top: 30rpx; */
-  border: 0rpx solid darkgray;
   background: #fff500;
-  padding: 0rpx 0rpx;
+  border-top: 1rpx dashed black;
+  /* border-bottom-left-radius: 45rpx; */
+  /* border-bottom-right-radius: 45rpx; */
+  /* box-shadow: 5px 2px 25px #888888; */
+}
+.list-item-first view:first-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 550rpx;
+}
+.list-item-first view+view{
+  display: flex;
+  justify-content: center;
+  width: 195rpx;
+  border-left: 5rpx solid black;
 }
 
   /* 轮播图  */
 .list-item-map{
   height: 350rpx;
-  padding: 0rpx 0rpx;
+  margin-top: 120rpx;
+  padding: 0rpx;
 }
 .list-item-map swiper{
   width: 100%;
@@ -53,15 +76,28 @@ page {
   height: auto;
   margin: 20rpx 20rpx;
 }
-.list-item-adress{
-  flex-grow: 10;
+.box-time-phone{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  width: 710rpx;
+}
+.box-time-phone .box-time{
+  width: 355rpx;
+}
+.box-time-phone .box-phone{
+  width: 355rpx;
+}
+.item-title{
+  width: 100%;
 }
 
   /* 课程滚动视图  */
 .list-item-program{
-  margin: 0;
+  margin: 20rpx 0;
 }
-.list-item-program text{
+.list-item-program .item-title{
   margin-left: 20rpx;
   margin-bottom: 10rpx;
 }
@@ -71,34 +107,65 @@ page {
   background-color: #F6F6F6;
   overflow: hidden;
 }
-.scroll-view_H{
+.scroll-view_H,.scroll-view_C{
     display: flex;
     flex-direction:column;
     justify-content:flex-start; 
     white-space: nowrap;
 }
-.scroll-view-item_H{
+.scroll-view-item_H,.scroll-view-item_C{
+    position:relative; 
     display: inline-block;
     text-align: center;
-    line-height: 130rpx;
-    width: 250rpx;
+    width: 280rpx;
     height: 130rpx;
     margin-right: 20rpx; 
     white-space: pre-wrap; 
 }
-.scroll-view-item_H text{
-    width: 100%;
-    float:left;
-    margin: 0 auto;
+.scroll-view-item_H > view{
+  display:flex;   
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  float: left; 
+  height: 100%;
+  width: 100%;
 }
-.bc_green{
-  background: green;
+.scroll-view-item_H > view view:first-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 130rpx;
 }
-.bc_red{
-  background: red;
+.scroll-view-item_H > view view:last-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 180rpx;
+  height: 130rpx;
 }
-.bc_yellow{
-  background: yellow;
+.scroll-view-item_H > view view:last-child text{
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.scroll-view-item_C > view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-view-item_C > view > text{
+  width: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 /* 评论列表  */
@@ -119,12 +186,17 @@ page {
   padding: 10rpx 0;
   border-bottom: 3rpx solid gainsboro;
 }
+.list-comment > .list-comment-item:last-child{
+  border-bottom: 0rpx solid gainsboro;
+  margin-bottom: 300rpx;
+}
 .list-comment > .comment-item-head{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items:flex-start;
 }
+
   /* 用户部分  */
 .customer-comments .img-name-date{
   display: flex;

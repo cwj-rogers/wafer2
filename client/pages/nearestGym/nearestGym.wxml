@@ -14,7 +14,7 @@
         </view>
         <view class='list-item-item list-item-content'>
           <text bindtap='gymDetail' class='h1-heading'>{{item.gymName}}</text>
-          <view>
+          <view class='tagsBox'>
             <block wx:for="{{item.tags}}">
               <text class='item-tag'>{{item}}</text>
             </block>

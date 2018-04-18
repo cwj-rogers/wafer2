@@ -5,8 +5,14 @@
   <!-- 健身房详情 -->
     <view class='flex-wrp' style='flex-direction:column;align-items:center;'>
       <view class="list-item list-item-first bg-yellow">
-        <text class='fitness-room h1-heading'>天河贝曼咖啡店</text>
-      </view>
+        <view>
+          <text class='h1-heading'>天河贝曼咖啡店</text>
+          <text class='main-text'>南庄正吉利广场五楼斯蒂芬李会计</text>
+        </view>
+        <view bindtap='showInMap'>
+          <image src='../home/map.png' style="width: 20px; height: 20px; background-color: #eeeeee;"></image>
+        </view>
+      </view> 
 
       <!-- 轮播图  -->
       <view class="list-item list-item-map">
@@ -21,67 +27,63 @@
 
       <!-- 场地介绍  -->
       <view class="list-item">
-         <view class='list-item-item'>
-          <view>
-            <text class='item-title'>营业 10:00-22:00</text>
-            <text>d电话 0757-85339798</text>
+        <view class='list-item-item'>
+          <view class='box-time-phone'>
+            <view class='box-time'>
+              <text class='h2-heading'>营业 : </text>
+              <text>10:00-22:00</text>
+            </view>
+            <view class='box-phone'>
+              <text class='h2-heading'>电话 : </text>
+              <text>0757-85339798</text>
+            </view>
           </view>
         </view>
         <view class='list-item-item'>
-          <text class='item-title h1-heading'>场地导航</text>
-          <text>佛山市顺德区市图书馆</text>
-        </view>
-        <view class='list-item-item'>
-          <text class='item-title h1-heading'>场地介绍</text>
-          <text>萨拉丁飞机撒地方流口水的风景塑料袋看风景水力发电</text>
+          <text class='item-title h2-heading'>场地介绍</text>
+          <text class='main-text'>萨拉丁飞机撒地方流口水的风景塑料袋看风景水力发电器材很从租sad分类旧阿斯蒂芬离开家我去哦二球撒地方离开静安寺</text>
         </view> 
-          <!-- 课程安排  -->
+      </view>   
+      <view class='cut-off-line'></view>
+      <view class="list-item">  
+        <!-- 课程安排  -->
+         <view class='list-item-item list-item-program'>
+          <text class='item-title h2-heading'>课程介绍</text>
+          <view class='list-item-program-content'>
+            <scroll-view class="scroll-view_C" scroll-x="true">
+              <block wx:for="{{courseList}}">
+                <view id="green" class="scroll-view-item_C bg-white">
+                  <view>
+                    <text class='h3-heading'>{{item.name}}</text>
+                    <text class='small-text'>{{item.weekday}}</text>
+                  </view>
+                </view>
+              </block>
+            </scroll-view>
+          </view>
+        </view> 
+          <!-- 员工介绍  -->
         <view class='list-item-item list-item-program'>
-          <text class='item-title h1-heading'>课程安排</text>
+          <text class='item-title h2-heading'>员工介绍</text>
           <view class='list-item-program-content'>
             <scroll-view class="scroll-view_H" scroll-x="true">
-                <view id="green" class="scroll-view-item_H bc_green">
-                  <text class='small-text'>瑜伽课程 sadfsadf</text>
-                  <text class='small-text'>每逢周一,周二,周三上课</text>
+              <block wx:for="{{staffList}}">
+                <view id="green" class="scroll-view-item_H bg-white">
+                  <view>
+                      <view>
+                        <image src='../index/user-unlogin.png' style='width:80rpx;height:80rpx;'></image> 
+                      </view>
+                     <view>
+                      <text class='h3-heading'>{{item.name}}</text>
+                      <text class='small-text'>{{item.professional}}</text>
+                     </view>
+                  </view>
                 </view>
-                <view id="red"  class="scroll-view-item_H bc_red"></view>
-                <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
-                <view id="green" class="scroll-view-item_H bc_green"></view>
-                <view id="red"  class="scroll-view-item_H bc_red"></view>
-                <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+              </block>  
             </scroll-view>
           </view>
         </view>
-          <!-- 员工介绍  -->
-        <view class='list-item-item'>
-          <text class='item-title h1-heading'>员工简介</text>
-          <view class='all-staffs'>
-            <view class='staff-img-name' bindtap='staffIntroduced'>
-              <image src='../index/user-unlogin.png'></image>
-              <text class='small-text link-style'>李全蛋饼</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text class='small-text link-style'>李全蛋饼</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text class='small-text link-style'>李全蛋饼</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text class='small-text link-style'>李全蛋饼</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text class='small-text link-style'>李全蛋饼</text>
-            </view>
-            <view class='staff-img-name'>
-              <image src='../index/user-unlogin.png'></image>
-              <text class='small-text link-style'>李全蛋饼</text>
-            </view>
-          </view>
-        </view>
+
       </view>
 
       <!-- 用户评论  -->
@@ -94,44 +96,22 @@
             <button size='mini'>写评论</button>
           </view>
         </view>
-        <view class='list-comment-item'>
-          <view class='customer-comments'>
-            <view class='img-name-date'>
-              <image src="../addCgi/code.jpg"></image>
-              <text class='username'>王二狗</text>
-              <text class='comment-date small-text'>2018-3-29</text>
+        <!-- 评论模块  -->
+        <block wx:for="{{commentData}}" wx:key="id" wx:if="{{commentState}}">
+          <view class='list-comment-item'>
+            <view class='customer-comments'>
+              <view class='img-name-date'>
+                <image src="../addCgi/code.jpg"></image>
+                <text class='username'>{{item.name}}</text>
+                <text class='comment-date small-text'>{{item.data}}</text>
+              </view>
+              <text class='comment-content small-text'>{{item.comment}}</text>
             </view>
-            <text class='comment-content small-text'>地方很漂亮,还不错.空间很大肯开阔,里面设备完善跑步机双杠力臂屈伸,划船机,什么的应有尽有,最重要的是里面的小姐姐教练长得水灵灵的,看着就很喜欢.</text>
           </view>
-        </view>
+        </block>
         <view class='list-comment-item'>
           <view class='customer-comments'>
-            <view class='img-name-date'>
-              <image src="../addCgi/code.jpg"></image>
-              <text class='username'>王二狗</text>
-              <text class='comment-date small-text'>2018-3-29</text>
-            </view>
-            <text class='comment-content small-text'>地方很漂亮,还不错.空间很大肯开阔,里面设备完善跑步机双杠力臂屈伸,划船机,什么的应有尽有,最重要的是里面的小姐姐教练长得水灵灵的,看着就很喜欢.</text>
-          </view>
-        </view>
-        <view class='list-comment-item'>
-          <view class='customer-comments'>
-            <view class='img-name-date'>
-              <image src="../addCgi/code.jpg"></image>
-              <text class='username'>王二狗</text>
-              <text class='comment-date small-text'>2018-3-29</text>
-            </view>
-            <text class='comment-content small-text'>地方很漂亮,还不错.空间很大肯开阔,里面设备完善跑步机双杠力臂屈伸,划船机,什么的应有尽有,最重要的是里面的小姐姐教练长得水灵灵的,看着就很喜欢.</text>
-          </view>
-        </view>
-        <view class='list-comment-item'>
-          <view class='customer-comments'>
-            <view class='img-name-date'>
-              <image src="../addCgi/code.jpg"></image>
-              <text class='username'>王二狗</text>
-              <text class='comment-date small-text'>2018-3-29</text>
-            </view>
-            <text class='comment-content small-text'>地方很漂亮,还不错.空间很大肯开阔,里面设备完善跑步机双杠力臂屈伸,划船机,什么的应有尽有,最重要的是里面的小姐姐教练长得水灵灵的,看着就很喜欢.</text>
+            <button class='button-text' bindtap='showComment'>{{commentState?'收起评论':'查看评论'}}</button>
           </view>
         </view>
       </view>

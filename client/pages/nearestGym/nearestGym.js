@@ -23,7 +23,7 @@ Page({
     var that = this;
     setTimeout(function(){
       var newArr = that.data.requestResult.concat(getData(5));
-      console.log(newArr)
+      // console.log(newArr)
       that.setData({
         requestResult: newArr
       })
@@ -45,7 +45,6 @@ function getData(time){
   var data = [];
   for(var i=0;i<time;i++){
     id++;
-    console.log(id);
     var gym = gyms[parseInt(Math.random()*(gyms.length) )];
     var addr = addrs[parseInt(Math.random() * (addrs.length))];
     var dist = parseInt(Math.random()*10000+100,10);
@@ -57,6 +56,6 @@ function getData(time){
 
     data.push({ id: id, distance: dist, gymName: gym, tags: tag, addr: addr, img: ""});
   }
-  console.log(data);
+  // console.log(data);
   return data;
 }
