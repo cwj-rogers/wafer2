@@ -1,11 +1,11 @@
 <view class="container">
-  <view class="page-body">
-    <!-- 排序条件  -->
-    <view class='sort-condition'>
-      <view class='smart h2-heading'>智能排序</view>
-      <view class='nearest h2-heading'>距离最近</view>
-    </view>
+  <!-- 排序条件  -->
+  <view class='sort-condition bg-yellow'>
+    <view class='smart h2-heading' bindtap='smartOrder'>智能排序</view>
+    <view class='nearest h2-heading' bindtap='nearest'>距离最近</view>
+  </view>
 
+  <view class="page-body">
     <!-- 健身房列表完整item  -->
     <block wx:for="{{requestResult}}" wx:key="id">
       <view class='list-item'>

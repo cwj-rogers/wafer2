@@ -34,6 +34,51 @@ Page({
     wx.navigateTo({
       url: '../fitness/fitness'
     })
+  },
+  smartOrder:function(){
+    wx.showLoading({
+      title: 'loading',
+      mask: true,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    var data = getData(5);
+    var that = this;
+    setTimeout(function(){
+      that.setData({
+        requestResult: data
+      })
+      wx.hideLoading();
+    },1000)
+  },
+  nearest: function(){
+    wx.showLoading({
+      title: 'loading',
+      mask: true,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    var data = this.data.requestResult;
+    var sortData;
+    for(var i=0;i<data.length;i++){
+      for(var j=i+1;j<data.length;j++){
+        if (data[i].distance > data[j].distance) {
+          var mid = data[i];
+          data[i] = data[j];
+          data[j] = mid;
+        }
+      }
+    }
+    console.log(data);
+    var that = this;
+    setTimeout(function(){
+      wx.hideLoading();
+      that.setData({
+        requestResult:data
+      });
+    },1000)
   }
 })
 

@@ -8,21 +8,28 @@ page {
 .sort-condition{
   display: flex;
   flex-direction: row;
-  padding: 10rpx;
-  background-color: white;
+  position: fixed;
+  z-index: 999;
+  /* padding: 10rpx; */
+  
 }
 .sort-condition view{
-  width: 365rpx;
-  height: 70rpx;
+  width: 375rpx;
+  height: 90rpx;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 5rpx solid rgba(255, 230, 0, 1);
+  border-bottom: 0rpx;
 }
 .sort-condition .smart{
-  border-right: 2rpx solid gainsboro;
-}
+  border-right: 1rpx solid rgba(255, 230, 0, 1);
+}  
 
 /* 列表样式  */
+.page-body{
+  padding-top: 90rpx;
+}
 .list-item{
   display: flex;
   flex-direction: row;
