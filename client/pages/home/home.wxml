@@ -7,7 +7,7 @@
         <view class="flex-item flex-item-month">{{month}}</view>
         <!-- 日期控件  -->
         <block wx:for="{{weekDate}}" wx:key="week">
-          <view class="flex-item">
+          <view class="flex-item" bindtap='chooseDate'>
             <text data-index="{{index}}" class='{{index!=selectedIndex? "flex-item-week":"flex-item-day"}}' bindtap='dateButtonTap'>{{index!=selectedIndex? item.week:item.day}}</text>
           </view>
         </block>
@@ -21,7 +21,7 @@
     <view class='flex-wrp'>
       
       <block wx:for="{{requestResult}}" wx:key="id">
-        <view class='list'>
+      <view class='list'>
         <!-- 场地简介  -->
         <view class="list-item list-item-first bg-yellow" bindtap='gymDetail'>
           <text class='fitness-room'>{{item.name}}</text>
@@ -54,10 +54,12 @@
           </view>
         </block>
         <!-- 查看更多  -->
+        <block wx:if="{{!clickedItem[item.id]}}">
         <view class="list-item list-item-last bg-yellow" bindtap='showAllAct' data-id="{{item.id}}" data-index="{{index}}">
-          <text class='see-more'>查看全部</text>
+          <text class='see-more'>· · 查看全部 · ·</text>
         </view>
-        </view>
+        </block>
+      </view>
       </block>
       
     </view>

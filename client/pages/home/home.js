@@ -12,6 +12,7 @@ Page({
       month: getMonth(),
       weekDate: getWeekDate(),
       selectedIndex: 0,
+      clickedItem:{}
   },
   onPullDownRefresh: function(e){
     console.log("下拉刷新");
@@ -85,14 +86,35 @@ Page({
       newActData2[i].actId = parseInt(Math.random() * 899 + 100, 10);
     }
     this.data.requestResult[index].activities = oldActData.concat(newActData2);
+    this.data.clickedItem[id] = 1 ;
     this.setData({
-      requestResult: this.data.requestResult
+      requestResult: this.data.requestResult,
+      clickedItem: this.data.clickedItem
     })
-    console.log(this.data.requestResult);
+    console.log(this.data);
+  },
+  chooseDate:function(){
+    //选择课程表日期
+    wx.showLoading({
+      title: 'loading',
+    })
+    var that = this;
+    var data = getListData();
+    var num = parseInt(Math.random()*3+1);
+    for(var i=0;i<num;i++){
+      var item = data.pop();
+      data.unshift(item);
+    }
+    setTimeout(function(){
+      that.setData({
+        requestResult: data
+      })
+      wx.hideLoading();
+    },500)
   }
 })
 
-//获取格式化时间数据
+//日期列表获取时间数据
 function getWeekDate(){
   var date = new Date();
   var data = [{ },{ },{ },{ },{ },{ },{ }];

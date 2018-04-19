@@ -39,7 +39,7 @@ page {
 
 .page-body{
   width: 750rpx;
-  padding-bottom: 30rpx;
+  padding-bottom: 180rpx;
   padding-top: 95rpx;
 }
 .flex-wrp{
@@ -138,12 +138,12 @@ page {
   margin-top: 15rpx;
 }
 .list-item-last{
-  height: 80rpx;
+  height: 65rpx;
   justify-content: center;
   border-bottom-left-radius: 20rpx;
   border-bottom-right-radius: 20rpx;
 }
 .list-item-last text{
-  font-size: 30rpx;
+  font-size: 24rpx;
   opacity: 0.5;
 }
