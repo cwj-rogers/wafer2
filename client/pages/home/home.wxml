@@ -26,7 +26,7 @@
         <view class="list-item list-item-first bg-yellow" bindtap='gymDetail'>
           <text class='fitness-room'>{{item.name}}</text>
           <view class='fitness-distance'>
-            <image style="width: 20px; height: 20px; background-color: #eeeeee;" src="map.png"></image>
+            <text class="iconfont icon-juli" style="font-size:40rpx;color:black"></text>  
             <text>{{item.distance>=1000? item.distance/1000+"km":item.distance+"m"}}</text>
           </view>
           <text class='go-detail'>＞</text>

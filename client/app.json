@@ -1,11 +1,11 @@
 {
   "pages":[
+    
     "pages/home/home",
     "pages/fitness/fitness",
     "pages/nearestGym/nearestGym",
-    
-    
     "pages/staffIntro/staffIntro",
+
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/test/test"
@@ -18,11 +18,17 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar":{
+    "selectedColor": "grey",
+    "selectedColor": "black",
     "list":[{
+      "iconPath":"./style/plan.png",
+      "selectedIconPath":"./style/plan2.png",
       "pagePath":"pages/home/home",
       "text":"最新活动"
     },
     {
+      "iconPath": "./style/fitness.png",
+      "selectedIconPath": "./style/fitness2.png",
       "pagePath": "pages/nearestGym/nearestGym",
       "text": "附近场地"
     }]

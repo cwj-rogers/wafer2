@@ -10,10 +10,11 @@
           <text class='explain h2-heading'>专业瑜伽教练</text>
       </view>
     </view>
+
     <view class='flex-item bg-white staff-qua'>
       <view class='title'>
         <view class='title-icon'>
-          <image src='../index/user-unlogin.png'></image>
+          <text class='iconfont icon-zizhi' style='font-size:80rpx;color:black'></text>
         </view>
         <text class='h1-heading'>资质履历</text>
       </view>
@@ -25,12 +26,13 @@
     <view class='flex-item bg-sub-color staff-talk'>
       <view class='title'>
         <view class='title-icon'>
-          <image src='../index/user-unlogin.png'></image>
+          <text class='iconfont icon-shuohuaspeak' style='font-size:80rpx;color:black'></text>
+
         </view>
         <text class='h1-heading'>教练寄语</text>
       </view>
       <view class='content'>
-        <text>sadfsadfsadf</text>
+        <text>你们这帮人都是人间精品!!!</text>
       </view>
     </view>
   </view>

@@ -35,7 +35,7 @@ page {
   height: 80rpx;
   width: 750rpx;
   background: #fff500;
-  border-top: 1rpx dashed black;
+  border-top: 5rpx solid rgb(255, 230, 0);
   /* border-bottom-left-radius: 45rpx; */
   /* border-bottom-right-radius: 45rpx; */
   /* box-shadow: 5px 2px 25px #888888; */
@@ -51,7 +51,7 @@ page {
   display: flex;
   justify-content: center;
   width: 195rpx;
-  border-left: 5rpx solid black;
+  border-left: 7rpx solid rgb(255, 230, 0);
 }
 
   /* 轮播图  */
@@ -91,6 +91,7 @@ page {
 }
 .item-title{
   width: 100%;
+  margin-bottom: 15rpx;
 }
 
   /* 课程滚动视图  */
@@ -99,7 +100,6 @@ page {
 }
 .list-item-program .item-title{
   margin-left: 20rpx;
-  margin-bottom: 10rpx;
 }
 .list-item-program-content {
   padding: 20rpx 20rpx;
@@ -112,6 +112,7 @@ page {
     flex-direction:column;
     justify-content:flex-start; 
     white-space: nowrap;
+    height: 130rpx;
 }
 .scroll-view-item_H,.scroll-view-item_C{
     position:relative; 

@@ -46,7 +46,6 @@ page {
 .title{
   display: flex;
   flex-direction: row;
-  margin-bottom: 20rpx;
 }
 .title .title-icon{
   display: flex;

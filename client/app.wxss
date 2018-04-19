@@ -1,3 +1,5 @@
+/* 引入图标  */
+@import "./style/iconfont.wxss";
 /**app.wxss**/
 .container {
   display: flex;
@@ -41,6 +43,7 @@
 /* 副标题  */
 .small-text{
   color: grey;
+  
   font-size: 24rpx;
   opacity: 0.7;
 }

@@ -83,6 +83,10 @@ page {
 .fitness-distance{
   margin-left: 30rpx;
 }
+.fitness-distance text:last-child{
+  margin-left: 5rpx;
+  font-size: 24rpx;
+}
 .go-detail{
   display: flex;
   flex-grow:2;

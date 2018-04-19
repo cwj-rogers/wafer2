@@ -10,7 +10,7 @@
           <text class='main-text'>南庄正吉利广场五楼斯蒂芬李会计</text>
         </view>
         <view bindtap='showInMap'>
-          <image src='../home/map.png' style="width: 20px; height: 20px; background-color: #eeeeee;"></image>
+          <text class='iconfont icon-ditu' style='font-size:80rpx'></text>
         </view>
       </view> 
 
@@ -31,11 +31,11 @@
           <view class='box-time-phone'>
             <view class='box-time'>
               <text class='h2-heading'>营业 : </text>
-              <text>10:00-22:00</text>
+              <text class='main-text'>10:00-22:00</text>
             </view>
             <view class='box-phone'>
               <text class='h2-heading'>电话 : </text>
-              <text>0757-85339798</text>
+              <text class='main-text'>0757-85339798</text>
             </view>
           </view>
         </view>
@@ -52,7 +52,7 @@
           <view class='list-item-program-content'>
             <scroll-view class="scroll-view_C" scroll-x="true">
               <block wx:for="{{courseList}}">
-                <view id="green" class="scroll-view-item_C bg-white">
+                <view class="scroll-view-item_C bg-white">
                   <view>
                     <text class='h3-heading'>{{item.name}}</text>
                     <text class='small-text'>{{item.weekday}}</text>
@@ -68,7 +68,7 @@
           <view class='list-item-program-content'>
             <scroll-view class="scroll-view_H" scroll-x="true">
               <block wx:for="{{staffList}}">
-                <view id="green" class="scroll-view-item_H bg-white">
+                <view class="scroll-view-item_H bg-white" bindtap='staffIntroduced'>
                   <view>
                       <view>
                         <image src='../index/user-unlogin.png' style='width:80rpx;height:80rpx;'></image> 

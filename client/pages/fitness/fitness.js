@@ -74,12 +74,12 @@ Page({
           name: "蜂狂运动中心",
           address: "南庄正吉利广场五楼斯蒂芬李会计",
           success:function(res){
-            console.log(res);
+            // console.log(res);
           }
         })
       }
     })
-    console.log(1);
+    // console.log(1);
   },
   showComment:function(){
     this.setData({
@@ -87,6 +87,7 @@ Page({
     })
   }
 })
+// 场地介绍
 function getComList(){
   var  data = [];
   var word = "色彩从当代建筑、路标、人行横道以及运动场馆中获取灵感，由此引发出大胆的颜色表达激活了色彩，与单调乏味的周边环境形成鲜明的对比。强调大胆的阴影和高光。引出意想不到且充满活力的颜色。调色板以一些基础色为基准，通过填充光谱来为Android、Web 和 iOS 环境提供一套完整可用的颜色。基础色的饱和度是 500。";
@@ -136,6 +137,6 @@ function getStaffs(){
       var professionalKey = parseInt(Math.random() * professional.length);
       data.push({ name: names[namesKey], professional: professional[professionalKey] })
   }
-  console.log(data);
+  // console.log(data);
   return data;
 }
