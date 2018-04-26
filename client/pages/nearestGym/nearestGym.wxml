@@ -9,18 +9,16 @@
     <!-- 健身房列表完整item  -->
     <block wx:for="{{requestResult}}" wx:key="id">
       <view class='list-item'>
-        <view class='list-item-item item-img' bindtap='gymDetail' style='width:200rpx;height:200rpx;overflow:hidden;'>
-          <image src='../addCgi/code.jpg'></image>
+        <view class='list-item-item item-img' data-id="{{item.id}}" bindtap='gymDetail' style='width:200rpx;height:200rpx;overflow:hidden;'>
+          <image src='../../img/gym.jpg' style='width:200rpx;height:200rpx;'></image>
         </view>
         <view class='list-item-item list-item-content'>
-          <text bindtap='gymDetail' class='h1-heading'>{{item.gymName}}</text>
+          <text bindtap='gymDetail' class='h1-heading'>{{item.title}}</text>
           <view class='tagsBox'>
-            <block wx:for="{{item.tags}}">
-              <text class='item-tag'>{{item}}</text>
-            </block>
+              <text class='item-tag'>健身房</text>
           </view>
           <view>
-            <text class='small-text'>{{item.addr}} </text>
+            <text class='small-text'>{{item.address}} </text>
           </view>
         </view>
         <view class='list-item-item list-item-sub'>
@@ -32,7 +30,7 @@
             <switch></switch>
           </view>
           <view>
-            <text class='small-text'>{{item.distance>=1000? item.distance/1000+"km":item.distance+"m"}}</text>
+            <text class='small-text'>{{item.distance}}</text>
           </view>
         </view>
       </view>

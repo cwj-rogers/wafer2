@@ -1,9 +1,9 @@
 {
   "pages":[
-    
+    "pages/nearestGym/nearestGym",
     "pages/home/home",
     "pages/fitness/fitness",
-    "pages/nearestGym/nearestGym",
+    
     "pages/staffIntro/staffIntro",
 
     "pages/index/index",

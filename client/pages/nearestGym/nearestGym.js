@@ -1,9 +1,22 @@
+var qqMap = require("../../utils/qqmap-wx-jssdk.js");
 var id = 1;
+var qqMapSDK;//qq地图实例
+var pageIndex = 1;
 Page({
   data:{
     msg:"hello world",
-    requestResult:getData(5),
+    requestResult:[],
     id:1
+  },
+  onLoad: function () {
+    // 实例化API核心类
+    qqMapSDK = new qqMap({
+      key: 'O7FBZ-NOMK3-Z273F-YPX4A-ZFKOZ-HEBKR'
+    });
+  },
+  onShow: function () {
+    var data;
+    this.searchCacheModule({});    
   },
   onPullDownRefresh:function(e){
     wx.showNavigationBarLoading();
@@ -17,40 +30,75 @@ Page({
     },1500)
   },
   onReachBottom:function(){
+    //加载更多
     wx.showLoading({
       title: '加载中',
     });
-    var that = this;
-    setTimeout(function(){
-      var newArr = that.data.requestResult.concat(getData(5));
-      // console.log(newArr)
-      that.setData({
-        requestResult: newArr
-      })
-      wx.hideLoading();
-    },1000)
+    // 走缓存模块,获取数据
+    var item5;
+    this.searchCacheModule({
+      success: function (res) {
+        item5 = res;
+      }
+    });
+    var list = this.data.requestResult.concat(item5);
+    console.log('reachBottom', list);
+    this.setData({
+      requestResult: list
+    })
+    wx.hideLoading();
   },
-  gymDetail: function () {
+  searchCacheModule:function(callback){
+    var list = wx.getStorageSync('gymListCache');
+    console.log(list);
+    if(list.length>0){
+      var item5 = list.splice(0,5);
+      wx.setStorageSync('gymListCache', list);
+      //执行回调函数
+      callback.success(item5);
+    }else{
+      var that = this;
+      qqMapSDK.search({
+        keyword: "健身房",
+        page_size: 20,
+        page_index: pageIndex,
+        success: function (res) {
+          pageIndex++;
+          if (res.data.length <= 0) {
+            wx.showToast({
+              title: '没有更多',
+            })
+          }
+          console.log(pageIndex, res);
+          //处理获取的数据
+          var list = res.data;
+          for (var i = 0; i < list.length; i++) {
+            var distance = list[i]._distance;
+            distance = distance >= 1000 ? (distance / 1000).toFixed(1) + "km" : distance + "m";
+            list[i].distance = distance
+          }
+          //取出5条数据
+          var item5 = list.splice(0, 5);
+          //剩余的15条放缓存
+          wx.setStorageSync('gymListCache', list);
+          //插入数据
+          var list = that.data.requestResult.concat(item5);
+          that.setData({
+            requestResult: list
+          })
+        }
+      })
+    }
+  },
+  gymDetail: function (e) {
+    var id = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: '../fitness/fitness'
     })
   },
   smartOrder:function(){
-    wx.showLoading({
-      title: 'loading',
-      mask: true,
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
-    var data = getData(5);
-    var that = this;
-    setTimeout(function(){
-      that.setData({
-        requestResult: data
-      })
-      wx.hideLoading();
-    },1000)
+    //智能排序
+    
   },
   nearest: function(){
     wx.showLoading({
@@ -64,7 +112,7 @@ Page({
     var sortData;
     for(var i=0;i<data.length;i++){
       for(var j=i+1;j<data.length;j++){
-        if (data[i].distance > data[j].distance) {
+        if (data[i]._distance > data[j]._distance) {
           var mid = data[i];
           data[i] = data[j];
           data[j] = mid;
@@ -82,7 +130,7 @@ Page({
   }
 })
 
-//健身房数据
+//模拟数据
 function getData(time){
   var gyms = ["领尚健身俱乐部", "宝力来健身俱乐部(铂金店)", "君健运动健身俱乐部", "巴厘星空健身俱乐部", "美力传说健身俱乐部", "万达广场古德菲力健身俱乐部","杰菲健身俱乐部(陈村店)"];
   var tags = ["wifi","停车场","健身餐","环境好","器材齐全","帅哥美女多","课程丰富","教练nice","设施破旧","人多器材少","上课质量差","推销多","会员太贵","停车不方便"];
