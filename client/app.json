@@ -18,7 +18,6 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar":{
-    "selectedColor": "grey",
     "selectedColor": "black",
     "list":[{
       "iconPath":"./style/plan.png",

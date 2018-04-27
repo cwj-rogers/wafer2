@@ -6,8 +6,8 @@
     <view class='flex-wrp' style='flex-direction:column;align-items:center;'>
       <view class="list-item list-item-first bg-yellow">
         <view>
-          <text class='h1-heading'>天河贝曼咖啡店</text>
-          <text class='main-text'>南庄正吉利广场五楼斯蒂芬李会计</text>
+          <text class='h1-heading'>{{fitnessInfo.title}}</text>
+          <text class='main-text'>{{fitnessInfo.ad_info.city+fitnessInfo.ad_info.district+fitnessInfo.address}}</text>
         </view>
         <view bindtap='showInMap'>
           <text class='iconfont icon-ditu' style='font-size:80rpx'></text>
@@ -35,7 +35,7 @@
             </view>
             <view class='box-phone'>
               <text class='h2-heading'>电话 : </text>
-              <text class='main-text'>0757-85339798</text>
+              <text class='main-text'>{{fitnessInfo.tel}}</text>
             </view>
           </view>
         </view>

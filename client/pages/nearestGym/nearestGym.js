@@ -6,17 +6,19 @@ Page({
   data:{
     msg:"hello world",
     requestResult:[],
-    id:1
+    id:1,
+    requestEnd:0
   },
   onLoad: function () {
     // 实例化API核心类
     qqMapSDK = new qqMap({
       key: 'O7FBZ-NOMK3-Z273F-YPX4A-ZFKOZ-HEBKR'
     });
+    wx.removeStorageSync('gymListCache');
+    this.searchCacheModule({});
   },
   onShow: function () {
-    var data;
-    this.searchCacheModule({});    
+        
   },
   onPullDownRefresh:function(e){
     wx.showNavigationBarLoading();
@@ -35,39 +37,47 @@ Page({
       title: '加载中',
     });
     // 走缓存模块,获取数据
-    var item5;
-    this.searchCacheModule({
-      success: function (res) {
-        item5 = res;
-      }
-    });
-    var list = this.data.requestResult.concat(item5);
-    console.log('reachBottom', list);
-    this.setData({
-      requestResult: list
-    })
+    this.searchCacheModule();
     wx.hideLoading();
   },
-  searchCacheModule:function(callback){
+  searchCacheModule:function(){
+    //提示没有更多数据
+    if(this.data.requestEnd==1){
+      wx.showToast({
+        title: '没有更多!',
+        icon: "none"
+      })
+      return;
+    }
+
     var list = wx.getStorageSync('gymListCache');
     console.log(list);
     if(list.length>0){
+      //缓存中还有数据
       var item5 = list.splice(0,5);
       wx.setStorageSync('gymListCache', list);
-      //执行回调函数
-      callback.success(item5);
+      //插入新数据
+      var list = item5.length > 0 ? this.data.requestResult.concat(item5) : this.data.requestResult;
+      console.log('reachBottom', list);
+      this.setData({
+        requestResult: list
+      })
     }else{
+      //发起新的请求
       var that = this;
       qqMapSDK.search({
         keyword: "健身房",
         page_size: 20,
         page_index: pageIndex,
+        address_format: 'short',
         success: function (res) {
           pageIndex++;
           if (res.data.length <= 0) {
             wx.showToast({
-              title: '没有更多',
+              title: '没有更多!',
+              icon: "none"
             })
+            that.setData({requestEnd:1});
           }
           console.log(pageIndex, res);
           //处理获取的数据
@@ -82,7 +92,7 @@ Page({
           //剩余的15条放缓存
           wx.setStorageSync('gymListCache', list);
           //插入数据
-          var list = that.data.requestResult.concat(item5);
+          var list = item5.length > 0 ? that.data.requestResult.concat(item5) : that.data.requestResult;
           that.setData({
             requestResult: list
           })
@@ -91,9 +101,16 @@ Page({
     }
   },
   gymDetail: function (e) {
-    var id = e.currentTarget.dataset.id;
+    var key = e.currentTarget.dataset.key;
+    var location = e.currentTarget.dataset.location;
+    var data = this.data.requestResult[key];
+    console.log(key,data);
+    if (!data){
+      return;
+    }
+    wx.setStorageSync('fitnessDetail', data);
     wx.navigateTo({
-      url: '../fitness/fitness'
+      url: '../fitness/fitness?location=' + location
     })
   },
   smartOrder:function(){

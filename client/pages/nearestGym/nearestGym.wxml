@@ -9,11 +9,11 @@
     <!-- 健身房列表完整item  -->
     <block wx:for="{{requestResult}}" wx:key="id">
       <view class='list-item'>
-        <view class='list-item-item item-img' data-id="{{item.id}}" bindtap='gymDetail' style='width:200rpx;height:200rpx;overflow:hidden;'>
+        <view class='list-item-item item-img' data-key="{{index}}" data-location="{{item.location.lat+','+item.location.lng}}" bindtap='gymDetail' style='width:200rpx;height:200rpx;overflow:hidden;'>
           <image src='../../img/gym.jpg' style='width:200rpx;height:200rpx;'></image>
         </view>
         <view class='list-item-item list-item-content'>
-          <text bindtap='gymDetail' class='h1-heading'>{{item.title}}</text>
+          <text data-key="{{index}}" data-location="{{item.location.lat+','+item.location.lng}}" bindtap='gymDetail' class='h1-heading'>{{item.title}}</text>
           <view class='tagsBox'>
               <text class='item-tag'>健身房</text>
           </view>

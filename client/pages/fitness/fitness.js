@@ -2,7 +2,10 @@
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+var qqMap = require('../../utils/qqmap-wx-jssdk.js')
+
 var id = 1;
+var qqMapSDK;
 Page({
   data: {
     imgUrls: [
@@ -14,27 +17,50 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
+
+    fitnessInfo:{},
     commentData:getComList(),
     commentState:0,
     courseList:getCourses(),
-    staffList: getStaffs()
+    staffList: getStaffs(),
+    location:{},
+  },
+  onLoad:function(pageOptions){
+    console.log('options',pageOptions);
+    var location = pageOptions.location.split(',');
+    this.setData({ location: location});
+    // 实例化API核心类
+    qqMapSDK = new qqMap({
+      key: 'O7FBZ-NOMK3-Z273F-YPX4A-ZFKOZ-HEBKR'
+    });
+  },
+  onReady:function(){
+    var location = this.data.location;
+    var data = wx.getStorageSync('fitnessDetail');
+    this.setData({
+      fitnessInfo: data
+    })
   },
   changeIndicatorDots: function (e) {
+    //轮播
     this.setData({
       indicatorDots: !this.data.indicatorDots
     })
   },
   changeAutoplay: function (e) {
+    //轮播
     this.setData({
       autoplay: !this.data.autoplay
     })
   },
   intervalChange: function (e) {
+    //轮播
     this.setData({
       interval: e.detail.value
     })
   },
   durationChange: function (e) {
+    //轮播
     this.setData({
       duration: e.detail.value
     })
@@ -62,24 +88,17 @@ Page({
     })
   },
   showInMap: function(e){
-    wx.getLocation({
-      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+    var data = this.data.fitnessInfo;
+    wx.openLocation({
+      latitude: data.location.lat,
+      longitude: data.location.lng,
+      scale: 18,
+      name: data.title,
+      address: data.ad_info.province + data.ad_info.city + data.ad_info.district + data.address,
       success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 18,
-          name: "蜂狂运动中心",
-          address: "南庄正吉利广场五楼斯蒂芬李会计",
-          success:function(res){
-            // console.log(res);
-          }
-        })
+        // console.log(res);
       }
     })
-    // console.log(1);
   },
   showComment:function(){
     this.setData({
