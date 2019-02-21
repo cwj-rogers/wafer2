@@ -3,7 +3,7 @@
   <view class="flex-body">
     <view class='flex-item bg-sub-color staff-img-name'>
       <view class='staff-img'>
-        <image src='../index/user-unlogin.png'></image>
+        <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=136311242,685396724&fm=27&gp=0.jpg'></image>
       </view>
       <view class='staff-name'>
           <text class='name h1-heading'>Lucy姐姐</text>

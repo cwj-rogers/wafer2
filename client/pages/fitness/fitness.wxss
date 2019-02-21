@@ -139,6 +139,7 @@ page {
   width: 100rpx;
   height: 130rpx;
 }
+.scroll-view-item_H > view view:first-child image{border-radius: 20px;}
 .scroll-view-item_H > view view:last-child{
   display: flex;
   flex-direction: column;

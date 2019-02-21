@@ -39,7 +39,7 @@ page {
 
 .page-body{
   width: 750rpx;
-  padding-bottom: 180rpx;
+  padding-bottom: 150rpx;
   padding-top: 95rpx;
 }
 .flex-wrp{

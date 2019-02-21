@@ -35,7 +35,7 @@
         <block wx:for="{{item.activities}}" wx:key="actId">
           <view class="list-item">
             <view class='list-item-item' bindtap='staffIntroduced'>
-              <image style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;" src="../index/user-unlogin.png"></image>
+              <image src="{{item.image}}" style="width: 110rpx; height: 110rpx; background-color: #eeeeee;border-radius:50%;"></image>
             </view>
             <view class='list-item-item list-item-content'bindtap='actExplode'>
               <text class='cname h2-heading'>{{item.actName}}</text>

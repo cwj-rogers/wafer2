@@ -142,9 +142,9 @@ function getMonth(){
 //获取列表数据
 function getListData(){
   var data = [
-    { id: 110, name: "嘉州健身训练中心", distance: "100", activities: [{actId:1,actName: "有氧健身操", room: "瑜伽大教室", time: "14:00-15:00", joinNum: 1 }, { actName: "瑜伽拉筋舒展训练",room: "瑜伽大教室2", time: "14:00-15:00", joinNum: 5}]},
-    { id: 111, name: "蜂狂运动中心", distance: "1500", activities: [{actId:2,actName: "TR悬挂训练", room: "蜂狂大教室", time: "17:00-19:00", joinNum: 25 }, { actName: "森吧有氧健身操",room: "蜂狂大教室2", time: "14:00-15:00", joinNum: 33 }] },
-    { id: 112, name: "燃爆点训练中心", distance: "2800", activities: [{ actId: 3,actName: "HIIT有氧减脂训练营", room: "爆点大教室", time: "21:00-22:00", joinNum: 35 }, { actName: "HipHop风格舞蹈课堂",room: "爆点大教室2", time: "14:00-15:00", joinNum: 22 }] }
+    { id: 110, name: "嘉州健身训练中心", distance: "100", activities: [{ actId: 1, actName: "有氧健身操", room: "瑜伽大教室", time: "14:00-15:00", joinNum: 1, image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4054466008,787170663&fm=27&gp=0.jpg' }, { actName: "瑜伽拉筋舒展训练", room: "瑜伽大教室2", time: "14:00-15:00", joinNum: 5, image:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3807064336,2594442662&fm=27&gp=0.jpg'}]},
+    { id: 111, name: "蜂狂运动中心", distance: "1500", activities: [{ actId: 2, actName: "TR悬挂训练", room: "蜂狂大教室", time: "17:00-19:00", joinNum: 25, image: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3640066040,3582176254&fm=27&gp=0.jpg' }, { actName: "森吧有氧健身操", room: "蜂狂大教室2", time: "14:00-15:00", joinNum: 33, image:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2144506293,3347285097&fm=27&gp=0.jpg'}] },
+    { id: 112, name: "燃爆点训练中心", distance: "2800", activities: [{ actId: 3, actName: "HIIT有氧减脂训练营", room: "爆点大教室", time: "21:00-22:00", joinNum: 35, image: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2689849996,1348686372&fm=27&gp=0.jpg' }, { actName: "HipHop风格舞蹈课堂", room: "爆点大教室2", time: "14:00-15:00", joinNum: 22, image:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=136311242,685396724&fm=27&gp=0.jpg'}] }
   ];
   return data;
 }

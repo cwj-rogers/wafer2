@@ -71,7 +71,7 @@
                 <view class="scroll-view-item_H bg-white" bindtap='staffIntroduced'>
                   <view>
                       <view>
-                        <image src='../index/user-unlogin.png' style='width:80rpx;height:80rpx;'></image> 
+                        <image src='{{item.images}}' style='width:80rpx;height:80rpx;'></image> 
                       </view>
                      <view>
                       <text class='h3-heading'>{{item.name}}</text>
@@ -101,7 +101,7 @@
           <view class='list-comment-item'>
             <view class='customer-comments'>
               <view class='img-name-date'>
-                <image src="../addCgi/code.jpg"></image>
+                <image src="{{item.images}}"></image>
                 <text class='username'>{{item.name}}</text>
                 <text class='comment-date small-text'>{{item.data}}</text>
               </view>

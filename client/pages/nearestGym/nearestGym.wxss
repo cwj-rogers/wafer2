@@ -47,6 +47,7 @@ page {
 .list-item-item{
   height: 200rpx;
 }
+.item-img image{width: 100%;height: 100%}
 /* 内容介绍  */
 .list-item-content{
   display: flex;
