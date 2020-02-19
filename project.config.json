@@ -1,13 +1,15 @@
 {
-	"client": "./client",
-	"svr": "./server",
-	"miniprogramRoot": "./client",
-	"qcloudRoot": "./server",
+	"client": "client/",
+	"svr": "server/",
+	"miniprogramRoot": "client/",
+	"qcloudRoot": "server/",
 	"setting": {
 		"newFeature": true
 	},
 	"appid": "wx1a380a05ee99f7d9",
-	"projectname": "%E6%B5%8B%E8%AF%95",
+	"projectname": "%E7%9F%AD%E8%A7%86%E9%A2%91%E5%B9%B3%E5%8F%B0",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

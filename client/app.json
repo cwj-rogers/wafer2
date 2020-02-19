@@ -1,38 +1,39 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/nearestGym/nearestGym",
-    
     "pages/fitness/fitness",
     "pages/staffIntro/staffIntro",
-
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/test/test"
   ],
-  "window":{
-    "backgroundColor":"#F6F6F6",
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "Wafer Quick Start",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
+  "tabBar": {
     "color": "#d9d9d9",
     "selectedColor": "#171717",
-    "position":"bottom",
-    "list":[{
-      "iconPath":"./style/plan.png",
-      "selectedIconPath":"./style/plan2.png",
-      "pagePath":"pages/home/home",
-      "text":"最新活动"
-    },
-    {
-      "iconPath": "./style/fitness.png",
-      "selectedIconPath": "./style/fitness2.png",
-      "pagePath": "pages/nearestGym/nearestGym",
-      "text": "附近场地"
-    }]
+    "position": "bottom",
+    "list": [
+      {
+        "iconPath": "./style/plan.png",
+        "selectedIconPath": "./style/plan2.png",
+        "pagePath": "pages/home/home",
+        "text": "最新活动"
+      },
+      {
+        "iconPath": "./style/fitness.png",
+        "selectedIconPath": "./style/fitness2.png",
+        "pagePath": "pages/nearestGym/nearestGym",
+        "text": "附近场地"
+      }
+    ]
   },
-  "debug":true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }
